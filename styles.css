@@ -1,0 +1,27 @@
+.texttodo{
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(22, 13, 13);
+}
+.buttontexttodo{
+    border-style: solid;
+    background-color: rgb(75, 72, 72);
+    color: rgb(202, 202, 202);
+    text-align: center;
+}
+.buttontexttodo:hover{
+    background-color: rgb(202, 202, 202);
+    color: black;
+    border-color: rgb(22, 13, 13);
+    transition-duration: 0.7s;
+}
+body{
+    background-color: rgb(39, 39, 39);
+}
+.list{
+    color: rgb(202, 202, 202);
+    cursor: pointer;
+}
+.tophead{
+    color: rgb(226, 224, 224)
+}

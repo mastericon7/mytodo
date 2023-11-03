@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function todoWrite() {
+            var newElement = document.createElement("div");
+            newElement.innerHTML = document.getElementById("box").value;
+            newElement.onclick = elementDelete;
+            document.getElementById("list").appendChild(newElement);
+            document.getElementById("box").value = ""; // Clear the input after adding the todo
+        }
+
+        function elementDelete() {
+            document.getElementById("list").removeChild(this);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById("box").addEventListener("keypress", function(event) {
+                if (event.key === 'Enter') {
+                    todoWrite();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="tophead">
+        <p>To-Do</p>
+        <p>Write in your To-Do then press Add to list button. To remove added To-Do's just press on them and it will be removed.</p>
+    </div>
+    <div class="buttonslist">
+        <input type="text" class="texttodo" id="box" placeholder="Add To-Do to list">
+        <br>        
+        <br>
+        <input type="button" class="buttontexttodo" value="Add to list" onclick="todoWrite();">
+        <br>
+        <br>
+        <div id="list" class="list"></div>
+    </div>
+</body>
+</html>
