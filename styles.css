@@ -2,6 +2,7 @@
     border-style: solid;
     border-radius: 5px;
     border-color: rgb(22, 13, 13);
+    font-style: italic;
 }
 .buttontexttodo{
     border-style: solid;
@@ -23,5 +24,9 @@ body{
     cursor: pointer;
 }
 .tophead{
-    color: rgb(226, 224, 224)
+    color: rgb(226, 224, 224);
+}
+.list:hover{
+    text-decoration: line-through;
+    font-style: italic;
 }
